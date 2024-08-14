@@ -20,3 +20,7 @@ To set up the RecipeCraft application, you'll need to manually install a few Pyt
 
    ```bash
    pip install Flask numpy scikit-learn pandas
+3. Run the Flask application to start the web server:
+   ```bash
+   flask run
+
