@@ -15,14 +15,13 @@
 
 ## Installation
 To set up the RecipeCraft application, you'll need to manually install a few Python frameworks and libraries. Follow these steps:
-
-Open a terminal or command prompt on your system.
-
-Install the required frameworks and libraries by running the following combined command:
+1. Open a terminal or command prompt on your system.
+2. Install the required frameworks and libraries by running the following combined command:
 
 bash
 Copy code
 pip install Flask numpy scikit-learn pandas
+
 This command will install:
 
 Flask: A lightweight web framework for building the web application.
