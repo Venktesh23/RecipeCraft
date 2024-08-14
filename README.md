@@ -8,12 +8,12 @@
 - **Machine Learning:** Utilizes the K-Nearest Neighbors (KNN) algorithm to identify and recommend similar recipes.
 - **User-Friendly Interface:** A responsive web interface designed using Flask and Bootstrap, ensuring an intuitive and seamless user experience.
 
-### Functionality
+## Functionality
 - **Form Submission:** Users enter their desired nutritional values and ingredients.
 - **Recommendation Generation:** The system processes the input and retrieves the top 5 most similar recipes using the KNN model.
 - **Display:** Recommended recipes are presented with details such as name, ingredients, and an image. 
 
-### Installation
+## Installation
 To set up the RecipeCraft application, you'll need to manually install a few Python frameworks and libraries. Follow these steps:
 
 Open a terminal or command prompt on your system.
