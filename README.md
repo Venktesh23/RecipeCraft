@@ -23,4 +23,5 @@ To set up the RecipeCraft application, you'll need to manually install a few Pyt
 3. Run the Flask application to start the web server:
    ```bash
    flask run
-
+## Conclusion
+RecipeCraft combines data processing, machine learning, and web development to offer a tailored culinary experience. By analyzing user inputs, the system identifies and presents recipes that align with users' dietary needs, making it easier to discover meals that are both nutritious and delicious.
