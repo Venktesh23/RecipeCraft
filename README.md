@@ -13,32 +13,10 @@
 - **Recommendation Generation:** The system processes the input and retrieves the top 5 most similar recipes using the KNN model.
 - **Display:** Recommended recipes are presented with details such as name, ingredients, and an image. 
 
-## Installation
+## Prerequisites
 To set up the RecipeCraft application, you'll need to manually install a few Python frameworks and libraries. Follow these steps:
 1. Open a terminal or command prompt on your system.
-2. Install the required frameworks and libraries by running the following combined command:
+2. Make sure you have python installed and add the required frameworks and libraries by running the following combined command:
 
-bash
-Copy code
-pip install Flask numpy scikit-learn pandas
-
-This command will install:
-
-Flask: A lightweight web framework for building the web application.
-NumPy: A library for numerical operations and data handling.
-Scikit-learn: A machine learning library for implementing K-Nearest Neighbors (KNN) and other data processing tools.
-Pandas: A library for data manipulation and analysis.
-Run the Flask application to start the web server:
-
-bash
-Copy code
-flask run
-Access the application in your web browser by navigating to:
-
-arduino
-Copy code
-http://127.0.0.1:5000/
-Interact with RecipeCraft:
-
-Enter your nutritional preferences and available ingredients.
-Receive personalized recipe recommendations directly through the web interface.
+   ```bash
+   pip install Flask numpy scikit-learn pandas
