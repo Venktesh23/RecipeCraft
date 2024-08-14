@@ -1,3 +1,2 @@
-# Recipe-Recommendation-Food-Recommendation-Python-Machine-Learning
+RecipeCraft is a web-based application that suggests recipes to users based on their nutritional preferences and available ingredients. By leveraging machine learning techniques, the system delivers personalized recipe recommendations that meet users' specific dietary needs.
 
-This project implements a K-Nearest Neighbors (KNN) algorithm to recommend recipes based on user-inputted nutrients and ingredients. It also includes a Flask web application where users can type in their desired nutrients and ingredients to receive personalized recipe recommendations.
