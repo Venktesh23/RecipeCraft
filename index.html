@@ -1,68 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Recommendation</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>RecipeCraft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            background-attachment: fixed;
+            background-size: cover;
+            color: #333;
+        }
 
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-primary {
+            background-color: #2980b9;
+            border-color: #2980b9;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #3498db;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .recipe-card .card-title {
+            color: #2980b9;
+            font-weight: 500;
+        }
+
+        .recipe-card .card-text {
+            color: #7f8c8d;
+        }
+
+        input, button {
+            transition: transform 0.3s ease;
+        }
+
+        input:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 8px rgba(41, 128, 185, 0.2);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        input[type="number"], input[type="text"] {
+            background: #ecf0f1;
+            border: 1px solid #bdc3c7;
+        }
+
+        input[type="number"]:focus, input[type="text"]:focus {
+            background: #fff;
+            border-color: #3498db;
+        }
+
+        .form-label {
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="mt-5 text-center">Recipe Recommendation System</h1>
-        <div class="form-container">
-            <form method="post" class="mt-4">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="calories">Calories</label>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">RecipeCraft</h1>
+        <div class="form-container mx-auto" style="max-width: 600px;">
+            <form method="post">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="calories" class="form-label">Calories</label>
                         <input type="number" class="form-control" id="calories" name="calories" step="any" required>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="fat">Fat</label>
+                    <div class="col-md-6">
+                        <label for="fat" class="form-label">Fat</label>
                         <input type="number" class="form-control" id="fat" name="fat" step="any" required>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="carbohydrates">Carbohydrates</label>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="carbohydrates" class="form-label">Carbohydrates</label>
                         <input type="number" class="form-control" id="carbohydrates" name="carbohydrates" step="any" required>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="protein">Protein</label>
+                    <div class="col-md-6">
+                        <label for="protein" class="form-label">Protein</label>
                         <input type="number" class="form-control" id="protein" name="protein" step="any" required>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="cholesterol">Cholesterol</label>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="cholesterol" class="form-label">Cholesterol</label>
                         <input type="number" class="form-control" id="cholesterol" name="cholesterol" step="any" required>
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="sodium">Sodium</label>
+                    <div class="col-md-6">
+                        <label for="sodium" class="form-label">Sodium</label>
                         <input type="number" class="form-control" id="sodium" name="sodium" step="any" required>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="fiber">Fiber</label>
+                <div class="mb-3">
+                    <label for="fiber" class="form-label">Fiber</label>
                     <input type="number" class="form-control" id="fiber" name="fiber" step="any" required>
                 </div>
-                <div class="form-group">
-                    <label for="ingredients">Ingredients</label>
+                <div class="mb-3">
+                    <label for="ingredients" class="form-label">Ingredients</label>
                     <input type="text" class="form-control" id="ingredients" name="ingredients" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Get Recommendations</button>
+                <button type="submit" class="btn btn-primary w-100">Get Recommendations</button>
             </form>
         </div>
 
         {% if recommendations %}
         <div class="mt-5">
-            <h2>Recommended Recipes</h2>
-            <div class="row">
+            <h2 class="text-center">Recommended Recipes</h2>
+            <div class="row g-4 mt-4">
                 {% for recipe in recommendations %}
-                <div class="col-md-4">
-                    <div class="card recipe-card">
-                        <img class="card-img-top recipe-image" src="{{ recipe['image_url'] }}" alt="{{ recipe['recipe_name'] }}">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 recipe-card">
+                        <img class="card-img-top" src="{{ recipe['image_url'] }}" alt="{{ recipe['recipe_name'] }}" style="object-fit: cover; height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">{{ recipe['recipe_name'] }}</h5>
                             <p class="card-text">{{ recipe['ingredients_list'] | truncate(100) }}</p>
@@ -74,8 +160,8 @@
         </div>
         {% endif %}
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
+
