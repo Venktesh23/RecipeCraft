@@ -5,12 +5,16 @@
 
 ## Features
 - **Personalized Recommendations:** Suggests recipes based on nutritional values and ingredients provided by the user.
+
 - **Machine Learning:** Utilizes the K-Nearest Neighbors (KNN) algorithm to identify and recommend similar recipes.
+
 - **User-Friendly Interface:** A responsive web interface designed using Flask and Bootstrap, ensuring an intuitive and seamless user experience.
 
 ## Functionality
 - **Form Submission:** Users enter their desired nutritional values and ingredients.
-- **Recommendation Generation:** The system processes the input and retrieves the top 5 most similar recipes using the KNN model.
+- **Recommendation Generation:** The system processes the input and retrieves the top 5 most similar recipes using the KNN model.The recommendation system utilizes the K-Nearest Neighbors (KNN) algorithm. KNN is a non-parametric method used for classification and regression. In this context, it identifies the most similar recipes to the input recipe based on Euclidean distance.
+The KNN model is trained on the combined feature set of recipes, allowing it to make recommendations based on the similarities between recipes in both numerical and ingredient feature spaces.
+
 - **Display:** Recommended recipes are presented with details such as name, ingredients, and an image. 
 
 ## Prerequisites
