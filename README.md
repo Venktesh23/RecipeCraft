@@ -18,10 +18,6 @@ The KNN model is trained on the combined feature set of recipes, allowing it to 
 - **Display:** Recommended recipes are presented with details such as name, ingredients, and an image. 
 
 ## Tools and Technologies
-Here’s the formatted text in README markdown format:
-
----
-
 ### Data Processing
 - **TF-IDF Vectorizer:** Converts ingredient lists into numerical vectors based on term importance.
 - **StandardScaler:** Normalizes numerical features to standardize their range.
