@@ -17,16 +17,16 @@ The KNN model is trained on the combined feature set of recipes, allowing it to 
 
 - **Display:** Recommended recipes are presented with details such as name, ingredients, and an image. 
 
-## Prerequisites and Tools
-Data Processing
+## Tools and Technologies
+- Data Processing
 •	TF-IDF Vectorizer: Converts ingredient lists into numerical vectors based on term importance.
 •	StandardScaler: Normalizes numerical features to standardize their range.
 •	NumPy: Used for handling numerical operations and feature combination.
 
-Machine Learning
+- Machine Learning
 •	K-Nearest Neighbors (KNN): Algorithm for identifying similar recipes based on Euclidean distance in the feature space.
 
-Web Development
+- Web Development
 •	Flask: Framework for building the web application.
 •	Bootstrap: CSS framework for styling the web interface and ensuring responsiveness.
 
